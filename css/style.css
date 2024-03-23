@@ -1,0 +1,680 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* header h1{
+    background-color: bisque;
+    text-align: center;
+    font-size: 2.1875rem;
+}
+
+
+@media (max-width:1440px){
+
+    header h1{
+        background-color: aquamarine;
+        text-align: right;
+    }
+
+
+
+
+}
+
+@media (max-width: 1024px){
+    header h1{
+        background-color: red;
+        text-align: center;
+        color: white;
+    }
+}
+
+@media (max-width: 768px){
+    header h1{
+        color: white;
+        text-decoration: underline;
+    }
+
+}
+@media (max-width: 425px){
+    header h1{
+        color: white;
+        text-decoration: underline;
+        font-size: 1.25rem;
+    }
+
+}
+
+@media (max-width: 320px){
+    header h1{
+        color: black;
+    }
+} */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(119, 136, 153, 0.181);
+    align-items: center;
+   
+}
+.navBar{
+    display: flex;
+    gap: 20px;
+    padding-right: 20px;
+    list-style: none;
+}
+.navBar li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.806);
+}
+
+.sectionFacebook{
+    display: flex;
+    width: 80%;
+    height: 31.25rem;
+    margin: auto;
+    align-items: center;
+}
+
+.sectionFacebook img{
+    width: 50%;
+}
+
+.login{
+    width: 50rem;
+    height: 350px;   
+    padding: 10px;
+    margin: 1%;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.277);
+    text-align: justify center;
+}
+
+/**grid trabaja con filas y columnas**/
+.galeriaGrid{
+    display: grid;
+    width: 80%;
+    height: 31.25rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 300px repeat(2, auto);
+    grid-template-areas: 
+    "img1 img2 img3"
+
+    ;
+    margin: auto;
+    gap: 10px;
+
+    object-fit: contain;
+}
+.prin1{
+    grid-area: img1;
+}
+.hor1{
+    grid-area: img2;
+}
+.hor2{
+    grid-area: img3;
+}
+.ver1{
+    grid-area: img4;
+}
+.ver2{
+    grid-area: img5;
+}
+
+
+
+.galeriaGrid img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+@media (max-width:1440px){
+
+}
+
+@media (max-width: 1024px){
+    .section-principal img{
+        width: 70%;
+    }
+
+    .login{
+        height: auto;
+    }
+}
+
+@media (max-width: 768px){
+    header{
+    justify-content: space-around;
+  }
+  .navBar{
+    padding-right: none;
+  }
+  .navBar li a{
+    font-size: 1.5625rem;
+  }
+  .section-principal{
+    flex-direction: column;
+  }
+  .login h1{
+    display: none;
+  }
+
+  .galeriaGrid{
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(4,auto);
+    grid-template-areas:
+    ". . ."
+    "img1 img2 img3"
+    "img1 img2 img3"
+    
+
+    ;
+    .prin1{
+        display: none;
+    }
+  }
+}
+@media (max-width: 425px){
+    .header-index{
+        flex-direction: column;
+        justify-content: none;
+        align-items: center;
+        gap: 1.25rem;
+    }
+    .login{
+        width: 80%;
+    }
+
+}
+
+@media (max-width: 320px){
+    .nav{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+    }
+    .navBar{
+        width: 70%;
+        flex-wrap: wrap;
+        margin: auto;
+        align-items: center;
+    }
+
+    .prin1{
+        display: block;
+    }
+    .galeriaGrid{
+        height: none;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "img1"
+        "img1"
+        "img2"
+        "img2"
+        "img3"
+        "img3"
+        ;
+    }
+}
+
+@media (max-width: 48px){
+    .nav{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+    }
+    .navBar{
+        width: 70%;
+        flex-wrap: wrap;
+        margin: auto;
+        align-items: center;
+    }
+
+    .prin1{
+        display: block;
+    }
+    .galeriaGrid{
+        height: none;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "img1"
+        "img1"
+        "img2"
+        "img2"
+        "img3"
+        "img3"
+        ;
+    }
+}
+
+
+
+.header-index{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 1.25rem;
+    width: 100%;
+    height: 4.375rem;
+    background-color: #F2F6F9;
+    /**CREA SEGUNDA CAPA Y SCROLEA DESÚÉS DE LA CABECERA, PARA DEJAR SIEMPRE VISIBLE LA BARRA DE NAVEGACIÓN**/
+    position: sticky;
+    top: 0;
+    font-size: medium;
+}
+
+.navBar{
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    
+}
+
+.navBar li a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.875rem;
+}
+
+.navBar li a:hover{
+    background: red;
+    color: white;
+    text-decoration: none;
+}
+
+.section-principal{
+    width: 100%;
+    height: 30rem;
+    background-image: url("../assets/dog_real.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-principal h1{
+    margin-bottom: 2.5rem;
+    font-size: 50px;
+    background-color: whitesmoke;
+    padding: 1.25rem;
+    text-shadow: 3px 2px 3px black;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: left;
+}
+
+.donacion{
+    width: 100%;
+    height: 30rem;
+    background-image: url("../assets/donacion_cachorro.jpg"); 
+    background-repeat: no-repeat;
+    background-position: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.donacion h1{
+    margin-bottom: 2.5rem;
+    font-size: 50px;
+    background-color: rgb(250, 243, 243);
+    padding: 1rem;
+    text-shadow: 3px 2px 3px rgb(7, 245, 185);
+    align-items: right;
+    justify-content: right;
+    text-align: left;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative;
+    right: -20px;
+
+}
+
+
+.section-dos{
+    background-color: azure;
+}
+
+.h2{
+    text-align: center;
+}
+
+.contenedor-cards{
+    display: flex;
+    width: 100%;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+    gap: 1.875rem;
+    /*background-color: aqua;*/
+}
+
+.contenedor-cards h2{
+    align-items: center;
+    /*background-color: aqua;*/
+}
+
+.card{
+    /*width: 18.75rem;
+    width: 21.25rem;
+    border: 1px solid black;
+    /* border-radius: 40% 40% 5px .3125rem; */
+    /*overflow: hidden; *oculatando execesos**/
+    box-shadow: 2px 2px 4px rgb(192, 182, 182) ;
+}
+
+.card .card-img{
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+}
+
+.card .card-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-1{
+    /* align-self: flex-start; */
+    background-color: #6E8C56;
+    text-align: center;
+
+}
+
+.card-2{
+    background-color: #6E8C56;
+    text-align: center;
+}
+
+.card-3{
+    background-color: #6E8C56;
+    text-align: center;
+}
+
+.card-4{
+    background-color: #6E8C56;
+    text-align: center;
+}
+
+/**
+footer
+**/
+.logo-w{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    /* gap: 1.25rem; */
+    margin-top: 6rem;
+    background-color: rgb(255, 248, 248);
+
+}
+
+footer div{
+    width: 250px;
+}
+
+h4{
+    padding-bottom: 14px;
+    margin-bottom: 14px;
+    border-bottom: 4px solid #fdbe46;
+}
+
+
+/** position **/
+
+/* relative */
+
+.position{
+    background-color: bisque;
+    /*position: relative;
+    /**top right bottom left -- trabaja con estas 4 posiciones**/
+
+}
+
+/**
+position absolute: toma el primer contenedor que encuentre
+*/
+
+.logo{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+
+/**
+ayudanos page
+**/
+
+.ayudanos{
+    width: 100%;
+    height: 30rem;
+    background-image: url("../assets/saludo_perruno.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(214, 212, 212);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modos-ayuda{
+    display: flex;
+    width: 100%;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+    gap: 1.875rem;
+    /*background-color: aqua;*/
+}
+
+.modos-ayuda .buttoncoop{
+    align-items: center;
+}
+
+/**
+quienes somos
+**/
+
+.quienesomos{
+    width: 100%;
+    height: 50rem;
+    background-image: url("../assets/dog_quienes_somos.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} 
+
+
+.quienesomos h5{
+    width: 50%;
+    height: 20rem;
+    align-items: left;
+    justify-content: left;
+    align-items: left;
+
+} 
+
+/**
+adopta
+**/
+
+.adopta{
+    width: 100%;
+    height: 50rem;
+    background-image: url("../assets/no-compre-adopta.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} 
+
+.adoptas {
+     
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(4,auto);
+    grid-template-areas:
+    ". . ."
+    "img1 img2 img3"
+    "img1 img2 img3"
+  }
+
+/**
+socios
+**/
+
+.socios{
+    width: 100%;
+    height: 50rem;
+    background-image: url("../assets/gatos_perros-3192bb68.jpeg");
+    background-repeat: no-repeat;
+    background-position: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} 
+
+.main-grid{
+    display: grid;
+    background-color: lightgray;
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: 200px repeat(3, 200px); /**el máximo de columnas que se puede colocar (12)*/
+    grid-template-rows: repeat(4, 200px) ; /** el máximo de filas es infinito*/
+
+    grid-template-areas:  
+    "section1 section1 section3 section3"
+    "section2 section2 section3 section3"
+    "section4 section4 section3 section3"
+    "section4 section4 section5 section6"
+    ;
+
+    /**si tiene la palabra content => afecta al contenedor **/
+    justify-content: center;
+    align-content: center;
+    row-gap: 10px;
+    column-gap: 20px;
+
+    /** las propiedades que tienen la palabra item, afecta a los hijos**/
+    /* justify-items: center;
+    align-items: center; */
+
+}
+
+.section1 {
+    grid-area: section1;
+    font-size: 50px;
+    background-color: whitesmoke;
+    padding: 1.25rem;
+    text-shadow: 3px 2px 3px black;
+    align-items: center;
+}
+
+.section2 {
+    background-color: rgb(230, 173, 173);
+    grid-area: section2;
+}
+.section2 img{
+    width: 100%;
+    height: 100%;    
+}
+.section3 {
+    background-color: rgb(223, 230, 173);
+    grid-area: section3;
+}
+.section3 img{
+    width: 100%;
+    height: 100%;    
+}
+.section4 {
+    background-color: rgb(174, 230, 173);
+    grid-area: section4;
+}
+.section4 img{
+    width: 100%;
+    height: 100%;
+}
+.section5 {
+    background-color: rgb(173, 183, 230);
+    grid-area: section5;
+}
+.section5 img{
+    width: 100%;
+    height: 100%;
+}
+.section6 {
+    background-color: rgb(230, 173, 221);
+    grid-area: section6;  
+}
+.section6 img{
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width:1440px) {
+    
+}
+
+@media (max-width:1024px) {
+    
+}
+
+@media (max-width:768px) {
+    .main-grid{
+        height: none;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "section1"
+        "section1"
+        "section2"
+        "section2"
+        "section3"
+        "section3"
+        "section3"
+        "section3"
+        "section3"
+        "section3"
+        "section4"
+        "section4"
+        "section4"
+        "section4"
+        "section5"
+        "section6"
+    }
+}
+
+@media (max-width:425px) {
+    
+}
+
+@media (max-width:320px) {
+    
+}
